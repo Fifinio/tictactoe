@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <span onclick="document.getElementById('info').style = 'visibility:visible; opacity:1;'">Info</span>
+
+    <!-- INFO POPUP -->
+    <div id="info" class="popup">
+        <h2>Instructions</h2>
+        <button id="close" onclick="document.querySelector('#info').style = 'visibility:hidden; opacity:0;'">Close</button>
+        <p>
+            The game is played on a 3x3 grid. Players take turns placing
+            their marks in empty squares ("X" and "O"). The first player
+            to get three of their marks in a row (up, down, across, or
+            diagonally) is the winner.
+        </p>
+        <p>
+            When all 9 squares are full, the game is over. If no player
+            has 3 marks in a row, the game ends in a tie.
+        </p>
+        
+    </div>
+    <!-- END OF INFO POPUP -->
+
+    <!-- Winning popup -->
+    <div id="popup" class="popup" onclickoff="document.querySelector('#popup').style = 'visibility:hidden; opacity:0;'">
+        <h2 class="title"></h2>
+        <h4 id="whoWon"></h4>
+    </div>
+    <!-- END OF WINNING POPUP -->
+    <!-- GAME AREA -->
+    <table class="ticTacToe">
+        <tr>
+            <td class="box" id="0"></td>
+            <td class="box" id="1"></td>
+            <td class="box" id="2"></td>
+        </tr>
+        <tr>
+            <td class="box" id="3"> </td>   
+            <td class="box" id="4"></td>
+            <td class="box" id="5"> </td>
+        </tr>
+        <tr>
+            <td class="box" id="6"> </td>
+            <td class="box" id="7"> </td>
+            <td class="box" id="8"> </td>
+        </tr>
+    </table>
+    <!-- GAME AREA -->
+    <button id="reset">Reset</button>
+    <script src="game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+</body>
+</html>

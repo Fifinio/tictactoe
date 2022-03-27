@@ -1,0 +1,116 @@
+body {
+    background-color: #f5f5f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box{       
+    background: transparent;
+    text-align: center;
+    width: 33%;
+    height: 33%;
+    vertical-align: center;
+    font-size: 7vw;
+    background-color:#f5f5f5;   
+    margin: 0;
+    user-select: none;
+    
+}
+.ticTacToe{
+    background-color: black;
+    width: 40vw;
+    height: 40vw; 
+    margin: 2% auto; /* center */
+    outline: solid #f5f5f5;
+}
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+table td {
+    border: 5px solid black;
+}
+#reset {
+    background-color: #3d79e9;
+    /* Blue */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+/* create a shake animation on reset hover */
+#reset:hover {
+    animation: shake 1s;
+    background-color: #3363bd;
+}
+.popup {
+    background-color: #f5f5f5;
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 50%;
+    margin: 0 auto; 
+    z-index: 3;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+}
+#info {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#popup{
+    visibility: hidden;
+    opacity: 0;
+    transition: width 0.5s ease-in-out, visibility 0s, opacity 0.5s linear;
+}
+#popup:hover {
+    animation: shake-violently 0.9s;
+}
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform:  rotate(0deg); }
+    70% { transform:  rotate(-1deg); }
+    80% { transform:  rotate(1deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-1deg); }
+}
+
+@keyframes shake-violently {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-5deg); }
+    20% { transform: rotate(5deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    60% { transform:  rotate(0deg); }
+    70% { transform:  rotate(-3deg); }
+    80% { transform:  rotate(3deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-5deg); }
+}
